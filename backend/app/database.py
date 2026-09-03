@@ -2,15 +2,17 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# SQLite file at backend/app.db (as required)
+# SQLite file next to backend/ (repo-relative, portable: local, Docker, HF Spaces)
 DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "app.db")
-# Also support absolute path requested
+# Legacy absolute path on the original dev machine — only used if it exists
 ALT_PATH = "/home/pandeyps/Prefix/rictrlab/backend/app.db"
+# Env override wins (e.g. DATABASE_FILE=/data/app.db on HF persistent storage)
+DB_FILE = os.environ.get("DATABASE_FILE") or (ALT_PATH if os.path.exists(ALT_PATH) else DB_PATH)
 # Ensure directory exists
-os.makedirs(os.path.dirname(ALT_PATH), exist_ok=True)
+os.makedirs(os.path.dirname(DB_FILE) or ".", exist_ok=True)
 
-# Use ALT_PATH as canonical
-SQLITE_URL = f"sqlite:///{ALT_PATH}"
+# Full URL override also supported (e.g. external Postgres)
+SQLITE_URL = os.environ.get("DATABASE_URL", f"sqlite:///{DB_FILE}")
 
 # Echo False for production
 engine = create_engine(

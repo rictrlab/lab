@@ -18,10 +18,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Copy problems from host? In production, mount volume or copy
-# Ensure problems dir is available at /problems or /home/pandeyps/Prefix/rictrlab/problems
-# For now, assume problems are mounted; if not, backend will still start with 0 problems
+# Problems are mounted via docker-compose (./problems:/app/problems).
+# If not mounted, backend still starts with 0 problems.
 
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
