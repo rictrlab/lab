@@ -1,0 +1,9 @@
+{
+  "id": 4,
+  "slug": "einsum-diagonal",
+  "title": "Einsum Diagonal",
+  "difficulty": "Medium",
+  "category": "Linear Algebra",
+  "function_name": "solve",
+  "description_short": "Extract the diagonal of a square matrix using einsum."
+}

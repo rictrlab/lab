@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+**/node_modules/
+
+# Next.js build output
+.next/
+frontend/.next/
+frontend/out/
+
+# Python bytecode / venvs
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+backend/venv/
+
+# SQLite runtime data (recreated by backend via init_db)
+*.db
+*.sqlite
+*.sqlite-journal
+
+# Env / secrets (never commit real credentials)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+*.swp
+.vscode/
+.idea/

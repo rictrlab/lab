@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "slug": "tensor-broadcast",
+  "title": "Tensor Broadcast",
+  "difficulty": "Easy",
+  "category": "Tensor Basics",
+  "function_name": "solve",
+  "description_short": "Add two tensors using broadcasting."
+}

@@ -1,0 +1,9 @@
+{
+  "id": 9,
+  "slug": "layer-norm",
+  "title": "Layer Normalization",
+  "difficulty": "Hard",
+  "category": "Normalization",
+  "function_name": "solve",
+  "description_short": "Implement layer normalization without using torch.nn."
+}

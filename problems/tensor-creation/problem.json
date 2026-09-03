@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "slug": "tensor-creation",
+  "title": "Tensor Creation",
+  "difficulty": "Easy",
+  "category": "Tensor Basics",
+  "function_name": "solve",
+  "description_short": "Create a 3x3 tensor with values 0 to 8."
+}

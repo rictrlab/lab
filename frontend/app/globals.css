@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #fafafa;
+  --card: #ffffff;
+  --border: #e4e4e7;
+  --accent: #000000;
+}
+
+html,
+body {
+  background-color: #fafafa;
+  color: #18181b;
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+html.dark,
+html.dark body {
+  background-color: #09090b;
+  color: #fafafa;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* markdown prose tweaks */
+.prose-invert a {
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-invert code {
+  background: #f4f4f5;
+  padding: 0.15rem 0.35rem;
+  font-size: 0.9em;
+}
+.prose-invert pre {
+  background: #f4f4f5 !important;
+  border: 1px solid #e4e4e7;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.prose-invert pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Boxed math formulas */
+.katex-display {
+  background: #ffffff !important;
+  border: 1px solid #e4e4e7 !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Ensure prose code blocks are square and boxed */
+.prose pre {
+  border-radius: 0 !important;
+  border: 1px solid #e4e4e7 !important;
+}
+
+/* Dark mode overrides */
+html.dark .bg-white { background-color: #18181b !important; }
+html.dark .bg-zinc-50 { background-color: #27272a !important; }
+html.dark .bg-zinc-100 { background-color: #27272a !important; }
+html.dark .bg-black { background-color: #fafafa !important; color: #09090b !important; }
+html.dark .bg-black:hover { background-color: #e4e4e7 !important; }
+html.dark .text-black { color: #fafafa !important; }
+html.dark .text-zinc-700 { color: #d4d4d8 !important; }
+html.dark .text-zinc-600 { color: #a1a1aa !important; }
+html.dark .text-zinc-500 { color: #a1a1aa !important; }
+html.dark .text-zinc-400 { color: #71717a !important; }
+html.dark .border-zinc-200 { border-color: #27272a !important; }
+html.dark .border-zinc-100 { border-color: #27272a !important; }
+html.dark .hover\:border-black:hover { border-color: #52525b !important; }
+html.dark .hover\:bg-zinc-50:hover { background-color: #27272a !important; }
+html.dark .hover\:bg-zinc-100:hover { background-color: #3f3f46 !important; }
+html.dark .hover\:text-black:hover { color: #fafafa !important; }
+html.dark .katex-display { background: #18181b !important; border-color: #27272a !important; }
+html.dark .prose-invert a { color: #fafafa !important; }

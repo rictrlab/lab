@@ -1,0 +1,9 @@
+{
+  "id": 7,
+  "slug": "masked-fill",
+  "title": "Masked Fill",
+  "difficulty": "Medium",
+  "category": "Tensor Basics",
+  "function_name": "solve",
+  "description_short": "Fill elements of a tensor where mask is True with a given value."
+}
