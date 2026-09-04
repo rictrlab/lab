@@ -1,0 +1,16 @@
+# Render Blueprint — one-click deploy of the RictrLab backend (free tier).
+# Dashboard → New → Blueprint → select rictrlab/lab repo.
+services:
+  - type: web
+    name: rictrlab-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: OMP_NUM_THREADS
+        value: 2
+      - key: MKL_NUM_THREADS
+        value: 2
+      - key: OPENBLAS_NUM_THREADS
+        value: 2

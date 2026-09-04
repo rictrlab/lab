@@ -1,6 +1,6 @@
-# Hugging Face Spaces (Docker SDK) — free CPU tier expects port 7860.
-# Space repo layout: copy this file as `Dockerfile` plus `backend/` and
-# `problems/` from the monorepo, then `git push` to the Space.
+# Production image: FastAPI backend + problems bundle.
+# Listens on $PORT (Render injects it; HF Spaces expects 7860).
+# Build from the repo root:  docker build -f Dockerfile -t rictrlab-api .
 FROM python:3.11-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -24,4 +24,4 @@ COPY problems ./problems
 
 EXPOSE 7860
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860}"]
