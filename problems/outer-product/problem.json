@@ -1,9 +1,0 @@
-{
-  "id": 6,
-  "slug": "outer-product",
-  "title": "Outer Product",
-  "difficulty": "Easy",
-  "category": "Linear Algebra",
-  "function_name": "solve",
-  "description_short": "Compute the outer product of two vectors."
-}

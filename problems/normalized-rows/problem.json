@@ -1,9 +1,0 @@
-{
-  "id": 5,
-  "slug": "normalized-rows",
-  "title": "Normalized Rows",
-  "difficulty": "Medium",
-  "category": "Normalization",
-  "function_name": "solve",
-  "description_short": "L2-normalize each row of a matrix."
-}

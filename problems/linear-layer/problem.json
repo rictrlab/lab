@@ -1,9 +1,0 @@
-{
-  "id": 10,
-  "slug": "linear-layer",
-  "title": "Linear Layer",
-  "difficulty": "Medium",
-  "category": "Linear Algebra",
-  "function_name": "solve",
-  "description_short": "Implement a fully-connected linear transformation."
-}

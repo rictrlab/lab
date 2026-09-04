@@ -1,9 +1,0 @@
-{
-  "id": 8,
-  "slug": "custom-activation",
-  "title": "Swish Activation",
-  "difficulty": "Medium",
-  "category": "Activation & Optimization",
-  "function_name": "solve",
-  "description_short": "Implement the Swish activation function x * sigmoid(x)."
-}

@@ -1,9 +1,0 @@
-{
-  "id": 3,
-  "slug": "batched-matmul",
-  "title": "Batched Matrix Multiplication",
-  "difficulty": "Easy",
-  "category": "Linear Algebra",
-  "function_name": "solve",
-  "description_short": "Perform batched matrix multiplication of two 3D tensors."
-}

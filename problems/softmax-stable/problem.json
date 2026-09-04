@@ -1,9 +1,0 @@
-{
-  "id": 11,
-  "slug": "softmax-stable",
-  "title": "Stable Softmax",
-  "difficulty": "Medium",
-  "category": "Normalization",
-  "function_name": "solve",
-  "description_short": "Implement numerically stable softmax."
-}

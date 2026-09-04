@@ -1,9 +1,0 @@
-{
-  "id": 12,
-  "slug": "adam-step",
-  "title": "Adam Step",
-  "difficulty": "Hard",
-  "category": "Activation & Optimization",
-  "function_name": "solve",
-  "description_short": "Perform a single Adam optimization step."
-}
